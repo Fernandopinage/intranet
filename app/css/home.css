@@ -183,7 +183,7 @@ top: 15px;
 .main-menu>ul.logout {
 position:absolute;
 left:0;
-bottom:0;
+bottom:0px;
   
 }
 
@@ -309,6 +309,17 @@ height: 100%;
   /*border: 1px solid rgba(0,0,0,0.1);  */
   border-radius: 7px;
   box-shadow: 1px 3px 4px 0px rgba(0, 0, 0, 0.342);
+
+}
+
+#card{
+
+  background-color:#ffa500;
+  margin-bottom: 25px;
+}
+#title{
+  color:#fff;
+  padding-left:20px;
 }
 .icons{
 
@@ -317,3 +328,9 @@ height: 100%;
 a{
   padding: 7px 0px 7px 0px;
 }
+
+p.fs-6{
+
+  margin-right: 25px;
+}
+

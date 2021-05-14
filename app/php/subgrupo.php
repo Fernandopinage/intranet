@@ -1,6 +1,6 @@
 <form action="" class="form">
-    <div class="card" style="background-color:#ffa500; margin-bottom: 25px;">
-        <div class="navbar navbar  navbar-expand-lg" style=" color:#fff; padding-left:20px;">
+    <div class="card" id="card">
+        <div class="navbar navbar  navbar-expand-lg" id="title">
             SUBGRUPO
         </div>
     </div>
@@ -18,7 +18,7 @@
 
     </div>
 
-    
+
     <div class="modal-footer">
 
         <button type="submit" class="btn btn-success" name="clientesalva">Salvar</button>

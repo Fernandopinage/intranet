@@ -18,10 +18,12 @@
 <body>
 
 
-    </div>
+    <nav class="navbar navbar-light bg-light justify-content-end">
+        <div>
+            <p class="fs-6"><?php echo "Luiz Fernando"; ?></p>
+        </div>
+    </nav>
     <nav class="main-menu">
-
-
 
         <div>
             <a class="logo" href="http://startific.com">
@@ -34,55 +36,55 @@
 
                 <li>
                     <a href="?p=home">
-                    <i class="icons"> <img src="../img/home.png"> </i>
+                        <i class="icons"> <img src="../img/home.png"> </i>
                         <span class="nav-text">Home</span>
                     </a>
                 </li>
 
                 <li class="darkerli">
                     <a href="?p=empresa">
-                    <i class="icons"> <img src="../img/empresa.png"> </i>
+                        <i class="icons"> <img src="../img/empresa.png"> </i>
                         <span class="nav-text">CADASTRO EMPRESA</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="?p=usuario">
-                         <i class="icons"> <img src="../img/user.png"> </i>
+                        <i class="icons"> <img src="../img/user.png"> </i>
                         <span class="nav-text">CADASTRO USUÁRIO</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="?p=setor">
-                    <i class="icons"> <img src="../img/setor.png"> </i>
+                        <i class="icons"> <img src="../img/setor.png"> </i>
                         <span class="nav-text">CADASTRO SETOR</span>
                     </a>
                 </li>
                 <li>
                     <a href="?p=funcao">
-                    <i class="icons"> <img src="../img/funcao.png"> </i>
+                        <i class="icons"> <img src="../img/funcao.png"> </i>
                         <span class="nav-text">CADASTRO FUNÇÃO</span>
                     </a>
                 </li>
                 <li>
                     <a href="?p=sub">
-                    <i class="icons"> <img src="../img/subgrupo.png"> </i>
+                        <i class="icons"> <img src="../img/subgrupo.png"> </i>
                         <span class="nav-text">CADASTRO SUBGRUPO</span>
                     </a>
                 </li>
                 <li>
                     <a href="?p=grupo">
-                    <i class="icons"> <img src="../img/grupo.png"> </i>
+                        <i class="icons"> <img src="../img/grupo.png"> </i>
                         <span class="nav-text">CADASTRO GRUPO</span>
                     </a>
                 </li>
 
-                
+
                 <ul class="logout">
                     <li>
                         <a href="#">
-                        <i class="icons"> <img src="../img/logout.png"> </i>
+                            <i class="icons"> <img src="../img/logout.png"> </i>
                             <span class="nav-text">
                                 Sair
                             </span>
