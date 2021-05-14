@@ -25,9 +25,11 @@
     </nav>
     <nav class="main-menu">
 
-        <div>
-            <a class="logo" href="http://startific.com">
-            </a>
+        <div class="logo">
+
+            <img src="../img/progride.jpg" width="30" height="30"> </i>
+
+
         </div>
         <div class="settings"></div>
         <div class="scrollbar" id="style-1">

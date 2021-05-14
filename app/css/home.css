@@ -17,6 +17,8 @@ body
 
 .logo{
   
+  margin-top: 15px;
+  margin-left: 10px;
 }
 
 .settings {
@@ -180,7 +182,7 @@ position:absolute;
 top: 15px;
 }
 
-.main-menu>ul.logout {
+.main-menu>ul {
 position:absolute;
 left:0;
 bottom:0px;
