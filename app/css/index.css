@@ -1,6 +1,6 @@
 body{
 
-    background-color: rgba(6, 105, 47, 0.089);
+    background-color: rgba(247, 93, 4, 0);
      font-family: Arial, Helvetica, sans-serif;
  }
  
@@ -37,3 +37,14 @@ body{
    margin-bottom: 50px;
    font-family: 'Cairo', sans-serif;
  }
+
+.btn{
+  color: #fff;
+  background-color: #ffa500;
+}
+.btn:hover{
+
+  color: #ffa500;
+  background-color: #fff;
+  border-color: #ffa500;
+}
