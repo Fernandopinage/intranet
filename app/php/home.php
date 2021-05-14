@@ -13,6 +13,9 @@
             case 'home':
                 //include_once "../php/cliente.php";
                 break;
+            case 'usuario_lista':
+                include_once "../php/usuarioselect.php";
+                break;
             case 'usuario':
                 include_once "../php/usuario.php";
                 break;

@@ -44,39 +44,39 @@
                 <li class="darkerli">
                     <a href="?p=empresa">
                         <i class="icons"> <img src="../img/empresa.png"> </i>
-                        <span class="nav-text">CADASTRO EMPRESA</span>
+                        <span class="nav-text">EMPRESA</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="?p=usuario">
+                    <a href="?p=usuario_lista">
                         <i class="icons"> <img src="../img/user.png"> </i>
-                        <span class="nav-text">CADASTRO USUÁRIO</span>
+                        <span class="nav-text">USUÁRIO</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="?p=setor">
                         <i class="icons"> <img src="../img/setor.png"> </i>
-                        <span class="nav-text">CADASTRO SETOR</span>
+                        <span class="nav-text">SETOR</span>
                     </a>
                 </li>
                 <li>
                     <a href="?p=funcao">
                         <i class="icons"> <img src="../img/funcao.png"> </i>
-                        <span class="nav-text">CADASTRO FUNÇÃO</span>
+                        <span class="nav-text">FUNÇÃO</span>
                     </a>
                 </li>
                 <li>
                     <a href="?p=sub">
                         <i class="icons"> <img src="../img/subgrupo.png"> </i>
-                        <span class="nav-text">CADASTRO SUBGRUPO</span>
+                        <span class="nav-text">SUBGRUPO</span>
                     </a>
                 </li>
                 <li>
                     <a href="?p=grupo">
                         <i class="icons"> <img src="../img/grupo.png"> </i>
-                        <span class="nav-text">CADASTRO GRUPO</span>
+                        <span class="nav-text">GRUPO</span>
                     </a>
                 </li>
 
