@@ -1,9 +1,6 @@
 <?php
 
-
-class ClassUsuario
-{
-
+Class ClassUsuario{
 
     private $id;
     private $nome;
@@ -130,4 +127,7 @@ class ClassUsuario
 
         $this->confirmesenha = $confirmesenha;
     }
+
 }
+
+?>

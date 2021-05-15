@@ -5,25 +5,29 @@ include_once "../dao/usuarioDAO.php";
 
 if (isset($_POST['enviar'])) {
     
-    $ClassUsuario = new ClassUsuario();
-    $ClassUsuario->setNome($_POST['nome']);
-    $ClassUsuario->setEmail($_POST['email']);
-    $ClassUsuario->setData($_POST['datanascimento']);
-    $ClassUsuario->setEmpresa($_POST['empresa']);
-    $ClassUsuario->setSetor($_POST['setor']);
-    $ClassUsuario->setFuncao($_POST['funcao']);
-    $ClassUsuario->setGrupo($_POST['grupo']);
-    $ClassUsuario->setLogin($_POST['login']);
-    $ClassUsuario->setSenha($_POST['senha']);
-    $ClassUsuario->setConfirme($_POST['confirmesenha']);
-
-    $usuario = new UsuarioDao();
-    $usuario->insertUsuario($ClassUsuario);
+    if($_POST['senha'] === $_POST['confirmesenha']){
+        
+        $ClassUsuario = new ClassUsuario();
+        $ClassUsuario->setNome($_POST['nome']);
+        $ClassUsuario->setEmail($_POST['email']);
+        $ClassUsuario->setData($_POST['datanascimento']);
+        $ClassUsuario->setEmpresa($_POST['empresa']);
+        $ClassUsuario->setSetor($_POST['setor']);
+        $ClassUsuario->setFuncao($_POST['funcao']);
+        $ClassUsuario->setGrupo($_POST['grupo']);
+        $ClassUsuario->setLogin($_POST['login']);
+        $ClassUsuario->setSenha($_POST['senha']);
+        $ClassUsuario->setConfirme($_POST['confirmesenha']);
+        $usuario = new UsuarioDao();
+        $usuario->insertUsuario($ClassUsuario);
+    }else{
+        echo "senha incorretar";
+    }
   
 }
 
 ?>
-<form action="" class="form">
+<form method="POST" class="form">
     <div class="card" id="card">
         <div class="navbar navbar  navbar-expand-lg" id="title">
             NOVO USUÁRIO
