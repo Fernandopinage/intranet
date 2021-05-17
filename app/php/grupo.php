@@ -1,12 +1,15 @@
 <?php 
 
 include_once "../class/CLassGrupo.php";
+include_once "../dao/grupoDAO.php";
+
 if(isset($_POST['gruposalva'])){
 
     $ClassGrupo = new ClassGrupo();
     $ClassGrupo->setGrupo($_POST['grupo']);
     $ClassGrupo->setDescricao($_POST['descricao']);
-
+    $grupo = new GrupoDao();
+    $grupo->insertGrupo($ClassGrupo);
 }
 
 

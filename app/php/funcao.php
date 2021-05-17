@@ -6,7 +6,8 @@ if(isset($_POST['funcaosalva'])){
     $ClassFuncao = new ClassFuncao();
     $ClassFuncao->setFuncao($_POST['funcao']);
     $ClassFuncao->setFuncao($_POST['descricao']);
-
+    $funcao = new FuncaoDao();
+    $funcao->insertFuncao($ClassFuncao);
 
 }
 

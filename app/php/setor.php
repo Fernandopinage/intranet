@@ -6,7 +6,8 @@ if(isset($_POST['setorsalva'])){
     $ClassSetor = new ClassSetor();
     $ClassSetor->setSetor($_POST['setor']);
     $ClassSetor->setDescricao($_POST['descricao']);
-
+    $setor = new SetorDao();
+    $setor->insertSetor($ClassSetor);
 }
 
 
