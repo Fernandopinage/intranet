@@ -1,13 +1,13 @@
 <?php
 include_once "../class/ClassUsuario.php";
 include_once "../dao/usuarioDAO.php";
-
+$ClassUsuario = new ClassUsuario();
+$usuario = new UsuarioDao();
 
 if (isset($_POST['enviar'])) {
-    
-    if($_POST['senha'] === $_POST['confirmesenha']){
-        
-        $ClassUsuario = new ClassUsuario();
+
+    if ($_POST['senha'] === $_POST['confirmesenha']) {
+
         $ClassUsuario->setNome($_POST['nome']);
         $ClassUsuario->setEmail($_POST['email']);
         $ClassUsuario->setData($_POST['datanascimento']);
@@ -18,13 +18,16 @@ if (isset($_POST['enviar'])) {
         $ClassUsuario->setLogin($_POST['login']);
         $ClassUsuario->setSenha($_POST['senha']);
         $ClassUsuario->setConfirme($_POST['confirmesenha']);
-        $usuario = new UsuarioDao();
         $usuario->insertUsuario($ClassUsuario);
-    }else{
+    } else {
         echo "senha incorretar";
     }
-  
 }
+
+$empresas =  $usuario->listarEmpresa();
+$setores = $usuario->listarSetor();
+$funcaes = $usuario->listarFuncao();
+$grupos = $usuario->listarGrupo();
 
 ?>
 <form method="POST" class="form">
@@ -55,25 +58,62 @@ if (isset($_POST['enviar'])) {
         <div class="col-3 input-group-sm">
             <label for="staticEmail" class="col-sm-6 col-form-label">Empresa </label>
             <select id="empresa" name="empresa" class="form-select">
-                <option>Disabled select</option>
+                <option value=""> </option>
+                <?php
+                foreach ($empresas as $empresa) {
+                ?>
+                    <option value="<?php echo $empresa->getID(); ?>"><?php echo $empresa->getRazao(); ?></option>
+
+                <?php
+                }
+                ?>
             </select>
         </div>
+
         <div class="col-3 input-group-sm">
             <label for="staticEmail" class="col-sm-2 col-form-label">Setor</label>
             <select id="setor" name="setor" class="form-select">
-                <option>Disabled select</option>
+                <option value=""></option>
+                <?php
+
+                foreach ($setores as $setores) {
+                ?>
+                    <option value="<?php echo $setores->getID(); ?>"><?php echo $setores->getSetor(); ?> </option>
+                <?php
+                }
+
+                ?>
             </select>
         </div>
         <div class="col-3 input-group-sm">
             <label for="staticEmail" class="col-sm-2 col-form-label">Função</label>
             <select id="funcao" name="funcao" class="form-select">
-                <option>Disabled select</option>
+                <option></option>
+                <?php
+
+                foreach ($funcaes as $funcaes) {
+                ?>
+                    <option value="<?php echo $funcaes->getID(); ?>"><?php echo $funcaes->getFuncao(); ?> </option>
+                <?php
+                }
+
+
+                ?>
             </select>
         </div>
         <div class="col-3 input-group-sm">
             <label for="staticEmail" class="col-sm-6 col-form-label">Grupo/Subgrupo </label>
             <select id="grupo" name="grupo" class="form-select">
-                <option>Disabled select</option>
+                <option></option>
+                <?php
+
+                foreach ($grupos as $grupos) {
+                ?>
+                    <option value="<?php echo $grupos->getID(); ?>"><?php echo $grupos->getGrupo(); ?> </option>
+                <?php
+                }
+
+                ?>
             </select>
         </div>
     </div>
