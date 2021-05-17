@@ -26,9 +26,9 @@
     <nav class="main-menu">
 
         <div class="logo">
-
+        <a href="?p=home">
             <img src="../img/progride.jpg" width="30" height="30"> </i>
-
+        </a>
 
         </div>
         <div class="settings"></div>
