@@ -310,7 +310,7 @@ height: 100%;
   padding: 35px 35px 45px;
   /*border: 1px solid rgba(0,0,0,0.1);  */
   border-radius: 7px;
-  box-shadow: 1px 3px 4px 0px rgba(0, 0, 0, 0.342);
+  box-shadow: 3px -1px 4px 1.9px rgba(0, 0, 0, 0.342);
 
 }
 
