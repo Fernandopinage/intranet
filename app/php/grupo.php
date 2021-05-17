@@ -1,3 +1,16 @@
+<?php 
+
+include_once "../class/CLassGrupo.php";
+if(isset($_POST['gruposalva'])){
+
+    $ClassGrupo = new ClassGrupo();
+    $ClassGrupo->setGrupo($_POST['grupo']);
+    $ClassGrupo->setDescricao($_POST['descricao']);
+
+}
+
+
+?>
 <form action="" class="form">
     <div class="card" id="card">
         <div class="navbar navbar  navbar-expand-lg" id="title">
@@ -21,7 +34,7 @@
 
     <div class="modal-footer">
 
-        <button type="submit" class="btn btn-success" name="clientesalva">Salvar</button>
+        <button type="submit" class="btn btn-success" name="gruposalva">Salvar</button>
     </div>
 
 </form>
