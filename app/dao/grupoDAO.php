@@ -10,9 +10,9 @@ Class GrupoDao extends DAO{
     public function insertGrupo(ClassGrupo $ClassGrupo){
 
         $sql = "INSERT INTO `grupo`(`grupo_id`, `grupo_nome`, `grupo_descricao`) VALUES (null, :grupo_nome, :grupo_descricao)";
-        $insert = $this->con->prepare();
-        $insert->bindValue('setor_nome',$ClassGrupo->getGrupo());
-        $insert->bindValue('setor_descricao',$ClassGrupo->getDescricao());
+        $insert = $this->con->prepare($sql);
+        $insert->bindValue(':grupo_nome',$ClassGrupo->getGrupo());
+        $insert->bindValue(':grupo_descricao',$ClassGrupo->getDescricao());
         $insert->execute();
 
     }

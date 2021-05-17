@@ -10,9 +10,9 @@ Class SetorDao extends DAO{
         $sql = "INSERT INTO `setor`(`setor_id`, `setor_nome`, `setor_descricao`) VALUES
          (null, :setor_nome, :setor_descricao)";
 
-         $insert = $this->con->prepare();
-         $insert->bindValue('setor_nome',$ClassSetor->getSetor());
-         $insert->bindValue('setor_descricao',$ClassSetor->getDescricao());
+         $insert = $this->con->prepare($sql);
+         $insert->bindValue(':setor_nome',$ClassSetor->getSetor());
+         $insert->bindValue(':setor_descricao',$ClassSetor->getDescricao());
          $insert->execute();
     }
 }

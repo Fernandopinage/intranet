@@ -14,7 +14,7 @@ if(isset($_POST['gruposalva'])){
 
 
 ?>
-<form action="" class="form">
+<form method="POST" class="form">
     <div class="card" id="card">
         <div class="navbar navbar  navbar-expand-lg" id="title">
             GRUPO
@@ -25,11 +25,11 @@ if(isset($_POST['gruposalva'])){
 
         <div class="col-4 input-group-sm">
             <label for="staticEmail" class="col-sm-2 col-form-label">Grupo</label>
-            <input type="text" class="form-control" id="grupo" placeholder="">
+            <input type="text" class="form-control" id="grupo" name="grupo" placeholder="">
         </div>
         <div class="col-8 input-group-sm">
             <label for="staticEmail" class="col-sm-2 col-form-label">Descrição</label>
-            <input type="text" class="form-control" id="descricao" placeholder="">
+            <input type="text" class="form-control" id="descricao" name="descricao" placeholder="">
         </div>
 
     </div>

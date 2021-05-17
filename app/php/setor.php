@@ -1,5 +1,6 @@
 <?php 
 
+include_once "../dao/setorDAO.php";
 include_once "../class/ClassSetor.php";
 if(isset($_POST['setorsalva'])){
 
@@ -12,7 +13,7 @@ if(isset($_POST['setorsalva'])){
 
 
 ?>
-<form action="" class="form">
+<form method="POST" class="form">
     <div class="card" id="card">
         <div class="navbar navbar  navbar-expand-lg" id="title">
             SETOR

@@ -1,20 +1,23 @@
 <?php
 
 include_once "../class/ClassFuncao.php";
+include_once "../dao/funcaDAO.php";
+
+
 if(isset($_POST['funcaosalva'])){
 
     $ClassFuncao = new ClassFuncao();
     $ClassFuncao->setFuncao($_POST['funcao']);
-    $ClassFuncao->setFuncao($_POST['descricao']);
+    $ClassFuncao->setDescricao($_POST['descricao']);
     $funcao = new FuncaoDao();
     $funcao->insertFuncao($ClassFuncao);
-
+     
 }
 
 
 ?>
 
-<form action="" class="form">
+<form method="POST" class="form">
     <div class="card" id="card">
         <div class="navbar navbar  navbar-expand-lg" id="title">
             FUNÇÃO

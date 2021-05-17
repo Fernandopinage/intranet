@@ -1,15 +1,19 @@
-<?php 
+<?php
 
+include_once "../dao/subgrupoDAO.php";
 include_once "../class/ClassSubgrupo.php";
+
 if(isset($_POST['subsalva'])){
 
     $ClassSubgrupo = new ClassSubgrupo();
     $ClassSubgrupo->setSubgrupoo($_POST['subgrupo']);
     $ClassSubgrupo->setDescricao($_POST['descricao']);
+    $subgrupo = new SubgrupoDao();
+    $subgrupo->inserSubgrupo($ClassSubgrupo);
 }
 
 ?>
-<form action="" class="form">
+<form method="POST" class="form">
     <div class="card" id="card">
         <div class="navbar navbar  navbar-expand-lg" id="title">
             SUBGRUPO
