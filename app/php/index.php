@@ -1,3 +1,20 @@
+<?php 
+include_once "../class/ClassIndex.php";
+include_once "../dao/indexDAO.php";
+if(isset($_POST['loginentrar'])){
+
+    $ClassIndex = new ClassIndex();
+    $ClassIndex->setLogin($_POST['login']);
+    $ClassIndex->setSenha($_POST['password']);
+    $index = new Index();
+    $index->selectIndex($ClassIndex);
+
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,7 +35,7 @@
                 <h2 class="form-signin-heading">ÁREA RESTRITA</h2>
                 <hr>
             </div>
-            <input type="text" class="form-control" name="valor" placeholder="Email ou CPF:" required="" autofocus="" />
+            <input type="text" class="form-control" name="login" placeholder="Email ou CPF:" required="" autofocus="" />
             <br>
             <input type="password" class="form-control" name="password" placeholder="Senha:" required="" />
             <br>
@@ -27,7 +44,8 @@
             </div>
 
             <div class="d-grid gap-2">
-            <button class="btn" type="button">Entrar</button>
+
+            <input type="submit" class="btn" name="loginentrar" value="Entrar">
             </div>
 
         </form>
